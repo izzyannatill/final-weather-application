@@ -1,7 +1,23 @@
 body {
-    background-color: black;
+    background-color: aliceblue;
+}
+
+footer {
+    text-align: center;
 }
 
 .whole-content {
     background: white;
+}
+
+.weather-content {
+    text-align: center;
+}
+
+form {
+    text-align: center;
+}
+
+.form-button {
+    background: #57b2e5;
 }
