@@ -1,3 +1,7 @@
 #form-button {
-    background-color: #57B2E5;
+    background: #57B2E5;
+}
+
+#search-form {
+    text-align: center;
 }
