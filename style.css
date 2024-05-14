@@ -16,6 +16,13 @@ form {
     text-align: center;
 }
 
+.whole-content {
+    background: white;
+    max-width: 800px;
+    margin: auto;
+    border-radius: 20px;
+}
+
 .top-form {
 background-image: url('clouds.jpg');
     background-repeat: no-repeat;
@@ -23,11 +30,8 @@ background-image: url('clouds.jpg');
     border-radius: 20px 20px 0 0;
 }
 
-.whole-content {
-    background: white;
-    max-width: 800px;
-   margin: auto;
-border-radius: 20px;
+#date {
+margin: 30px auto;
 }
 
 .weather-content {
@@ -53,4 +57,14 @@ border-radius: 20px;
     width: 50px;
         height: 50px;
         border-radius: 5px;
+}
+
+.wind {
+   color: #625370;
+   font-weight: bold;
+}
+
+.humidity {
+    color:#625370;
+    font-weight: bold;
 }
