@@ -16,6 +16,13 @@ form {
     text-align: center;
 }
 
+.top-form {
+background-image: url('clouds.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px 20px 0 0;
+}
+
 .whole-content {
     background: white;
     max-width: 800px;
@@ -28,7 +35,7 @@ border-radius: 20px;
 }
 
 .search-form {
-    border-radius: 20px;
+    border-radius: 30px;
     margin: 0;
 }
 
