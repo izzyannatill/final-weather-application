@@ -27,6 +27,10 @@ function search(event) {
   axios.get(apiUrl).then(displayTemperature);
 }
 
+
+let searchForm = document.querySelector(".search-form");
+searchForm.addEventListener("submit", search);
+
 function formatDate(date) {
   let minutes = date.getMinutes();
   let hours = date.getHours();
@@ -59,11 +63,9 @@ let month = months[date.getMonth()];
   return `${formattedDay} ${dates} ${month} ${hours}:${minutes}`;
 }
 
-let searchForm = document.querySelector(".search-form");
-searchForm.addEventListener("submit", search);
-
 let currentDateELement = document.querySelector("#current-date");
 let currentDate = new Date();
 
 currentDateELement.innerHTML = formatDate(currentDate);
+
 
