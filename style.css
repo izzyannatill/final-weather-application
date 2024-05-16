@@ -12,6 +12,7 @@ footer {
     padding: 20px 0;
     color: rgba(0, 0, 0, 0.8);
     font-size: smaller;
+    font-family: monospace;
 }
 
 form {
@@ -19,7 +20,7 @@ form {
 }
 
 a {
-    color: #FBA090;
+    color: #E67066;
 }
 
 h1 {
