@@ -11,7 +11,9 @@ function displayTemperature(response) {
   let forecast = document.querySelector(".description");
   forecast.innerHTML = response.data.condition.description;
   let pic = document.querySelector (".icon");
-  pic.innerHTML = response.data.condition.icon;
+  pic.innerHTML = `<img src="${response.data.condition.icon_url}"class="icon" />`;
+  let feel = document.querySelector(".feels");
+  feel.innerHTML = Math.round(response.data.temperature.feels_like);
 }
 
 function search(event) {
