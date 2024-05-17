@@ -117,3 +117,21 @@ margin-top: 20px;
 .winds {
     margin: 5px;
 }
+
+.weather-forecast {
+text-align: center;
+display: flex;
+justify-content: left;
+margin-top: 20px;
+color: #625370;
+margin-left: 20px ;
+}
+
+.forecast-img {
+    max-width: 50px;
+    max-height: 50px;
+}
+
+.high-low-temp {
+    font-size: 13px;
+}
