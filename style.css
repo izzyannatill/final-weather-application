@@ -126,9 +126,13 @@ margin-top: 20px;
 color: #625370;
 }
 
-.forecast-img {
-    max-width: 50px;
-    max-height: 50px;
+.forecast-icon {
+    padding: 0;
+}
+
+.forecast-pic {
+    max-width: 30px;
+    text-align: center;
 }
 
 .high-low-temp {
