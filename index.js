@@ -38,33 +38,44 @@ let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${ap
 axios(apiUrl).then(displayForecast);
 }
 
+function formatDay (timestamp) {
+let date = new Date(timestamp * 1000);
+let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+return days[date.getDay()];
+}
+
 function displayForecast (response) {
-let forecast = document.querySelector("#forecast");
 
 let forecastHtml = "";
 
-response.data.daily.forEach(function(day) {
+response.data.daily.forEach(function(day, index) {
+    if (index < 5) {
 forecastHtml = forecastHtml + `</div>
    <div class="weather-forecast">
 <div class="row">
   <div class="col-2">
     <div class="weather-date">
       <strong>
-Tues
+${formatDay(day.time)}
 </strong>
 </div>
 <div class="forecast-icon">
 <img src="${day.condition.icon_url}" class="forecast-pic"/>
 </div>
 <div class="high-low-temp">
-  <span class="high-temp">${Math.round(day.temperature.maximum)}°C</span>
+  <span class="high-temp"><strong>${Math.round(day.temperature.maximum)}°C</strong></span>
   <span class="low-temp"> ${Math.round(day.temperature.minimum)}°C</span>
 </div>
   </div>
  </div>`;
+    }
 });
+
+let forecast = document.querySelector("#forecast");
 forecast.innerHTML = forecastHtml;
 }
+
 
 function formatDate(date) {
   let minutes = date.getMinutes();
