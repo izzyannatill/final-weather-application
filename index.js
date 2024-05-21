@@ -35,30 +35,30 @@ searchForm.addEventListener("submit", search);
 function getForecast (city) {
       let apiKey = "35f5fdatd61eb8d900b80389439e49o7";
 let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
-axios(apiURL).then(displayForecast);
+axios(apiUrl).then(displayForecast);
 }
 
 function displayForecast (response) {
-
 let forecast = document.querySelector("#forecast");
 
-let days = ['Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday', 'Monday'];
 let forecastHtml = "";
 
-days.forEach(function(day) {
+response.data.daily.forEach(function(day) {
 forecastHtml = forecastHtml + `</div>
    <div class="weather-forecast">
 <div class="row">
   <div class="col-2">
     <div class="weather-date">
       <strong>
-${day}
+Tues
 </strong>
 </div>
-<div class="forecast-icon">star</div>
+<div class="forecast-icon">
+<img src="${day.condition.icon_url}" class="forecast-pic"/>
+</div>
 <div class="high-low-temp">
-  <span class="high-temp">18°C</span>
-  <span class="low-temp"> 12°C</span>
+  <span class="high-temp">${Math.round(day.temperature.maximum)}°C</span>
+  <span class="low-temp"> ${Math.round(day.temperature.minimum)}°C</span>
 </div>
   </div>
  </div>`;
