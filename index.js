@@ -55,11 +55,7 @@ let currentDate = new Date();
 
 currentDateELement.innerHTML = formatDate(currentDate);
 
-function search(event) {
-  event.preventDefault();
-  let searchInputElement = document.querySelector("#search-input");
-
-  let city = searchInputElement.value;
+function search(city) {
   let apiKey = "35f5fdatd61eb8d900b80389439e49o7";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
 
@@ -67,7 +63,12 @@ function search(event) {
 }
 
 let searchForm = document.querySelector(".search-form");
-searchForm.addEventListener("submit", search);
+searchForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  let searchInputElement = document.querySelector("#search-input");
+  let city = searchInputElement.value;
+  search(city);
+});
 
 function getForecast (city) {
       let apiKey = "35f5fdatd61eb8d900b80389439e49o7";
