@@ -1,5 +1,5 @@
 body {
-    background-color: rgba(240, 196, 169, 0.3);
+    background-color: rgba(131, 165, 184, 0.3);
     font-family:"Inter", sans-serif;
 }
 
@@ -108,6 +108,7 @@ margin-top: 20px;
 .description {
     text-transform: capitalize;
     margin: 5px;
+    font-weight: bold;
 }
 
 .humid {
@@ -118,13 +119,51 @@ margin-top: 20px;
     margin: 5px;
 }
 
-.weather-forecast {
+.feels {
+    font-weight: bold;
+}
+
+.humidity {
+font-weight: bold;
+}
+
+.wind {
+    font-weight: bold;
+}
+
+.weekly {
+    text-align: center;
+    padding-top: 25px;
+    margin-bottom: 0;
+    border-radius: 10px;
+    background-color: rgba(255, 171, 147, 0.2);
+    margin: 10px;
+    margin-bottom: 0;
+    margin-top: 30px;
+}
+
+#forecast {
 text-align: center;
 display: flex;
 justify-content: space-evenly;
 margin-top: 20px;
-color: #625370;
-padding-bottom: 10px;
+color: rgba(0, 0, 0, 0.7);
+border-radius: 10px;
+background-color: rgba(255, 171, 147, 0.2);
+margin: 10px;
+margin-top: 0;
+font-size: 17px;
+padding: 20px;
+padding-bottom: 30px;
+}
+
+.row {
+    background-color: white;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 95px;
+    height: 120px;
 }
 
 .forecast-icon {
@@ -134,8 +173,10 @@ padding-bottom: 10px;
 .forecast-pic {
     max-width: 60px;
     text-align: center;
+    padding-top: 10px;
 }
 
 .high-low-temp {
     font-size: 13px;
+    padding-top: 10px;
 }
